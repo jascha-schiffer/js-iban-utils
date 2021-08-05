@@ -1,0 +1,25 @@
+{
+  "name": "@codeplant-de/iban-utils",
+  "version": "0.0.1",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
+  "author": "Jascha Schiffer <jascha.schiffer@example.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "yarn cp-format",
+    "lint": "yarn cp-lint",
+    "build": "yarn build:clean && yarn build:cjs && yarn build:esm && yarn build:types",
+    "build:clean": "rimraf lib",
+    "build:esm": "rimraf lib/esm && yarn cp-build esm",
+    "build:cjs": "rimraf lib/cjs && yarn cp-build cjs",
+    "build:types": "yarn cp-build types lib/esm",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "@codeplant-de/javascript-linting": "^0.0.6",
+    "@codeplant-de/javascript-testing": "^0.0.7",
+    "@codeplant-de/javascript-transpiling": "^0.0.5",
+    "rimraf": "^3.0.2"
+  }
+}

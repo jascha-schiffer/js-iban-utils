@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+
+  "extends": "@codeplant-de/typescript-config/react-app.tsconfig.json",
+  "include": ["./src"]
+}
